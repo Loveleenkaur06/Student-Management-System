@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
-import toml
-config=toml.load('.streamlit/config.toml')
-print(config)
+
 st.set_page_config(page_title="Student Record Management System", layout="wide")
 st.title("Student Record Management System")
 st.sidebar.image("sms.png", width=200)
