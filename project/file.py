@@ -1,9 +1,12 @@
 import streamlit as st
 import pandas as pd
+from pathlib import Path
 
 st.set_page_config(page_title="Student Record Management System", layout="wide")
 st.title("Student Record Management System")
-st.sidebar.image("sms.png", width=200)
+image_path = Path(__file__).parent / "sms.png"
+st.sidebar.image(str(image_path), width=200)
+
 if 'students' not in st.session_state:
     st.session_state.students = []
 
